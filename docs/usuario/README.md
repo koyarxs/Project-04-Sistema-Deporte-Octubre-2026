@@ -1,5 +1,7 @@
 # Módulo Usuario
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 Resumen:
 - Endpoints CRUD: `POST /usuario`, `GET /usuario`, `GET /usuario/:id`, `PATCH /usuario/:id`, `DELETE /usuario/:id`.
 

@@ -1,5 +1,7 @@
 # Módulo Invitación
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 Resumen:
 - Endpoints: `POST /invitacion/agregarInvitacion`, `GET /invitacion/obtenerInvitaciones`, `GET /invitacion/obtenerInvitacion/:id`, `DELETE /invitacion/eliminarInvitacion/:id`, `POST /invitacion/aceptarInvitacion/:id`, `POST /invitacion/rechazarInvitacion/:id`.
 

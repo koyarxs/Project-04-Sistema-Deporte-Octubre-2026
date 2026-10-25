@@ -1,5 +1,7 @@
 # Contratos publicos compartidos
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 Espacio reservado para contratos publicos de la API, una vez que se defina
 su generacion y consumo con OpenAPI. Por ahora no contiene tipos ni un
 paquete compilable.

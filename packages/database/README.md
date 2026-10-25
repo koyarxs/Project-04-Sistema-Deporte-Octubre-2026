@@ -1,5 +1,7 @@
 # Base de datos: datos iniciales y permisos
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 El paquete tambien exporta `PrismaClient` y `PrismaPg` como
 `@comunidad/database` para el backend. `npm.cmd run build` genera el cliente
 ESM y lo compila a `dist` sin necesitar credenciales de la base. El backend

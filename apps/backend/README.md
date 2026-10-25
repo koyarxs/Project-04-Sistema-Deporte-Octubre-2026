@@ -1,5 +1,7 @@
 # Backend NestJS
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 API NestJS 12 con ESM. Requiere Node.js 24 y el PostgreSQL preparado por Docker.
 El esquema y el cliente Prisma pertenecen al paquete local `@comunidad/database`,
 en `packages/database`; no hay otra copia del esquema en esta aplicacion.

@@ -1,5 +1,7 @@
 # Módulo Auth
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 Resumen:
 - Endpoints: `POST /auth/loginGoogle` ? Login mediante Google ID token.
 - Usa Google OAuth2 para validar `idToken`, crea usuario si no existe y devuelve `{ accessToken, usuario }`.

@@ -1,5 +1,7 @@
 # Documentación del proyecto (resumen)
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 Esta carpeta contiene resúmenes por módulo enfocadas en la _superficie pública_ (controllers, DTOs y servicios).
 
 Módulos documentados por ahora (archivos en `docs/`):

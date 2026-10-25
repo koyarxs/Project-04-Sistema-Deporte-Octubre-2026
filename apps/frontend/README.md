@@ -1,5 +1,7 @@
 # Frontend Angular
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 Angular 22 con componentes standalone, Signals, rutas diferidas y Tailwind.
 La página inicial muestra el acceso a **Falta Uno**. Incluye `/registro` y
 `/iniciar-sesion`, conectados a la API. Ver [autenticación](../../docs/auth.md).

@@ -1,5 +1,7 @@
 # Módulo Jugador-Partido
 
+> Proyecto 04 | [Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026)
+
 Resumen:
 - Endpoints para gestionar la relación entre jugadores y partidos (inscripción, listado, eliminación, marcar asistencia/puntualidad):
   - `POST /jugador-partido/agregarJugadorPartido/:idJugador/:idPartido`
