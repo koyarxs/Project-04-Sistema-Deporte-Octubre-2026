@@ -1,5 +1,100 @@
 # Falta Uno
 
+**Project-04-Sistema-Deporte-Octubre-2026** · Plataforma multideportiva en desarrollo, creada en colaboración en Chile.
+
+<p align="center">
+  <img src="apps/frontend/public/images/falta-uno-logo-azul.png" width="460" alt="Falta Uno — El deporte nos encuentra" />
+</p>
+
+Falta Uno busca ayudar a las personas a encontrar compañía para practicar
+deportes y actividades físicas: desde salir a caminar o trotar hasta organizar
+encuentros en equipo. La visión contempla Chile y una futura expansión; el
+producto todavía está en construcción y no está desplegado en producción.
+
+## Colaboración y procedencia
+
+Proyecto trabajado en colaboración por **Yerko Barrera Pantoja
+([koyarxs](https://github.com/koyarxs))** y **Jean Paul
+([jpgomez8](https://github.com/jpgomez8))**.
+
+- Repositorio compartido: [jpgomez8/tefaltaunov2](https://github.com/jpgomez8/tefaltaunov2).
+- Esta copia personal: [koyarxs/Project-04-Sistema-Deporte-Octubre-2026](https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026).
+- Se conserva el historial del proyecto y la autoría de sus commits.
+- Las contribuciones al repositorio compartido se revisan mediante pull requests.
+  Cada desarrollador ejecuta su propia base de datos; Git comparte código,
+  migraciones y catálogos, no contraseñas ni datos privados locales.
+
+## Stack actual
+
+| Capa | Tecnologías |
+| --- | --- |
+| Frontend | Angular 22, componentes standalone, Signals, Reactive Forms, Tailwind CSS 4 |
+| Backend | NestJS 12, Node.js 24, TypeScript, ESM y API REST |
+| Persistencia | PostgreSQL 18.6 y Prisma ORM 7 |
+| Entorno local | Docker Compose, volumen persistente y usuario de base de datos limitado |
+| Pruebas | Vitest, Supertest y pruebas HTTP contra PostgreSQL real |
+| Revisión visual | Capturas de navegador con Playwright |
+| Colaboración | Git, GitHub, ramas y pull requests |
+
+Ionic/Capacitor para Android e iOS, Nx y PostGIS forman parte de la planificación;
+**aún no están implementados**. Angular y NestJS se ejecutan en el equipo;
+Docker contiene PostgreSQL y la tarea de preparación de la base.
+
+## Estado y entregas
+
+- **Fase 1:** base de datos, migración inicial, catálogos de Chile y entorno Docker.
+  [Resumen](docs/FASE-1.md) · [PR compartido #1](https://github.com/jpgomez8/tefaltaunov2/pull/1).
+- **Fase 2:** Angular y NestJS, conexión real a PostgreSQL, registro, inicio y cierre
+  de sesión, identidad visual y documentación.
+  [Resumen](docs/FASE-2.md) · [PR compartido #2](https://github.com/jpgomez8/tefaltaunov2/pull/2).
+- Última validación local: **34 pruebas aprobadas** (18 unitarias backend,
+  9 de integración HTTP/PostgreSQL y 7 frontend), con ambas compilaciones aprobadas.
+
+El flujo deportivo de encuentros, mapas, verificación por correo y recuperación
+de contraseña sigue pendiente. Consultar [autenticación](docs/auth.md) para el
+alcance y las limitaciones del acceso actual.
+
+## Capturas actuales
+
+### Inicio de sesión
+
+![Inicio de sesión de Falta Uno](docs/capturas/fase-2/login.png)
+
+### Registro
+
+![Registro de Falta Uno](docs/capturas/fase-2/registro.png)
+
+## Preparar esta copia
+
+Requiere Git, Node.js 24 y Docker Desktop con contenedores Linux.
+
+```powershell
+git clone https://github.com/koyarxs/Project-04-Sistema-Deporte-Octubre-2026.git
+cd Project-04-Sistema-Deporte-Octubre-2026
+npm.cmd run docker:up
+npm.cmd --prefix packages/database ci
+npm.cmd --prefix packages/database run backend:env
+npm.cmd --prefix apps/backend ci
+npm.cmd --prefix apps/frontend ci
+```
+
+En una terminal, iniciar la API:
+
+```powershell
+npm.cmd --prefix apps/backend run start:dev
+```
+
+En otra terminal, iniciar la web:
+
+```powershell
+npm.cmd --prefix apps/frontend start
+```
+
+Web: **http://localhost:4200**. API: **http://localhost:3000/health**.
+En macOS/Linux usar `npm` en lugar de `npm.cmd`.
+
+## Detalles de implementación
+
 Proyecto en desarrollo para organizar encuentros y actividades deportivas.
 El prototipo anterior se retiro para iniciar una nueva implementacion.
 `apps/frontend` contiene Angular 22 con Tailwind y `apps/backend` contiene
@@ -11,10 +106,10 @@ Los encuentros deportivos siguen pendientes.
 El paquete de base de datos conserva las migraciones, catalogos y permisos.
 Compose prepara PostgreSQL; por ahora Angular y NestJS se ejecutan en el equipo.
 
-El nombre previsto de la carpeta es `Project-05-Falta-Uno-Octubre-2026`.
-Si Windows mantiene la carpeta original en uso, cerrar VS Code y ejecutar
-`scripts/renombrar-proyecto.ps1` desde una ventana externa de PowerShell.
-El script renombra la carpeta y repara el enlace local de `@comunidad/database`.
+Al clonar esta copia, la carpeta toma el nombre del repositorio personal.
+El script `scripts/renombrar-proyecto.ps1` corresponde al renombrado opcional
+de la carpeta de trabajo original del repositorio compartido; no es necesario
+ejecutarlo en una copia recién clonada.
 La marca visible es **Falta Uno**. Los nombres técnicos existentes de bases,
 volúmenes Docker y paquetes compartidos se conservan para mantener los datos.
 
@@ -127,8 +222,8 @@ credenciales y respaldos `.backup`/`.dump` estan excluidos de Git.
 Cada colaborador genera sus propias credenciales y su propio volumen.
 Trabajar en ramas por tarea y abrir un pull request hacia `main` para revisar
 los cambios antes de integrarlos. La primera fase esta en
-`feat/fase-1-base-datos-docker` y el reinicio de las aplicaciones se prepara en
-`chore/reinicio-frontend-backend`. El codigo anterior sigue disponible en el
+`feat/fase-1-base-datos-docker` y la segunda fase compartida está en
+`feat/fase-2-falta-uno-autenticacion`. El código anterior sigue disponible en el
 historial de Git.
 
 ## Referencias de infraestructura
